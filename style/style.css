@@ -289,7 +289,11 @@ ul li:target {
   padding-top: 100px;
   padding-bottom: 50px;
   gap: 2rem;
-  height: 100vh;
+}
+@media screen and (min-height: 650px){
+  .home{
+    height: 100vh;
+  }
 }
 
 /* :where(.section1 .name) {
