@@ -70,7 +70,8 @@ img::selection{
 body{
     background-color: var(--BGCOLOR);
     color: var(--FONT-COLOR);
-    font: var(--FS) var(--FF);
+    font-size: var(--FS);
+    font-family: var(--FF);
     width: 100%;
     max-width: 1200px;
     /* overflow: hidden; */
