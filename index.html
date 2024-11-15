@@ -6,6 +6,17 @@
     <title>Daniel's Portfolio</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="img/PhotoRoom-20240501_071523.png">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "DjpIpMpUSxscY1ua_",
+        });
+    })();
+    </script>
 </head>  
 <body>
     <header>
@@ -139,14 +150,14 @@
         <!-- Contact article. -->
         <article class="contact" id="contact">
             <h2>Contact <span>Me</span></h2>
-            <form class="display-flex-center" action="#" method="post">
+            <form class="display-flex-center">
                 <input type="text" name="name" id="name" required placeholder="Name">
                 <input type="email" name="email" id="email" required placeholder="Email">
-                <input type="phone" name="number" id="number" placeholder="Phone Number" required>
+                <input type="phone" name="phone" id="number" placeholder="Phone Number" required>
                 <input type="text" name="subject" id="subject" placeholder="subject">
-                <textarea name="" id="" cols="100" rows="12" placeholder="Your Message"></textarea>
+                <textarea name="message" id="message" cols="100" rows="12" placeholder="Your Message"></textarea>
     
-                <button type="submit">Send Message</button>
+                <button class='submit-btn' type="submit">Send Message</button>
             </form>
         </article>
         <footer class="display-flex-center">
