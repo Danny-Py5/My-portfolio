@@ -311,14 +311,13 @@ header, .home{
 /* this style will reflect on the read more button, coz readmore button have hire-btn class */
 .hire-btn{
     padding: 0.5rem 2rem;
-    font-size: inherit;
     /* margin: 0 auto; */
     white-space: nowrap;
     background-color: transparent;
     color: white;
     font-weight: 300;
     border: 2px solid var(--BUTTON-BORDER-COLOR);
-    font-size: var(--FS-RESPONSIVE-MAX-1REM);
+    /* font-size: var(--FS-RESPONSIVE-MAX-1REM); */
     transition: all .3s linear;
     border-radius: 12px;
 }
