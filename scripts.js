@@ -62,6 +62,21 @@ function showSkills(clicked){
     }
 };
 
+function sendMail() {
+    const param = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        name: document.getElementById('phone').value,
+        name: document.getElementById('subject').value,
+        name: document.getElementById('message').value,
+    }
+
+    emailjs.send('service_tmorebs', 'template_x6zs8el', param).then(alert('Your email has been sent'));
+}
+
+document.querySelector('.submit-btn').addEventListener('click', sendMail)
+
+
 
 
 
