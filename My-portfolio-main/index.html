@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel's Portfolio</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" href="img/PhotoRoom-20240501_071523.png" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "DjpIpMpUSxscY1ua_"
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-cont">
+        <a href="#" class="logo"
+          ><h1><span>D</span>aniel</h1></a
+        >
+        <button class="menu-button">
+          <div class="menuicon"></div>
+        </button>
+        <nav id="navbar" class="display-flex-center navbar js-navbar">
+          <ul>
+            <li class="js-dsp-none-afterclick"><a href="#home">Home</a></li>
+            <li class="js-dsp-none-afterclick"><a href="#about">About</a></li>
+            <li class="js-dsp-none-afterclick">
+              <a href="#service">Service</a>
+            </li>
+            <li class="js-dsp-none-afterclick">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="js-dsp-none-afterclick">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home article -->
+      <article class="home display-flex-center" id="home">
+        <section class="section1 writeup">
+          <h2 class="nowrap name nowrap">Hi, it's Daniel</h2>
+          <h3 class="self-into nowrap">
+            I'am a
+            <span class="full-start-animate" data-text="Full-Stark Developer"
+              >Full-Stark Developer</span
+            >
+          </h3>
+          <p class="text-zoom intro-text">
+            Hello, I'm a Full-Stark Developer. I love creating cool websites
+            that work really well. I'm good at making them looking great and
+            easy to use. Let's work together to make your website awesome!
+          </p>
+          <div class="display-flex-center">
+            <button class="hire-btn">Hire Me!</button>
+          </div>
+        </section>
+        <section class="section2 display-flex-center">
+          <figure>
+            <img
+              src="img/PhotoRoom-20240501_071448.png"
+              width="200"
+              height="200"
+              alt="Daniel-picture"
+            />
+          </figure>
+        </section>
+      </article>
+
+      <!-- About article -->
+      <article class="about display-flex-center" id="about">
+        <section class="about-section1">
+          <img
+            src="img/PhotoRoom-20240501_170306.png"
+            width="400"
+            alt="my about section picture"
+          />
+          <div></div>
+        </section>
+        <section class="about-section2">
+          <div>
+            <h2>About Me</h2>
+          </div>
+          <p>
+            I am a Full-Stark Developer with a passion for creating captivating
+            user experiences. I specialize in crafting responsive and visually
+            appealing websites. I also bring a unique versatility to the table
+            with my proficiency in Python and javascript, leveraging them for
+            web applications, and problem-solving.
+          </p>
+          <ul class="skills-list-cont">
+            <li>
+              <a
+                class="nowrap"
+                onclick="showSkills('personal-info')"
+                href="javascript:void(0)"
+                >Personal Info</a
+              >
+            </li>
+            <li>
+              <a onclick="showSkills('skills')" href="javascript:void(0)"
+                >Skills</a
+              >
+            </li>
+
+            <li>
+              <a onclick="showSkills('interests')" href="javascript:void(0)"
+                >Interests</a
+              >
+            </li>
+            <li>
+              <a onclick="showSkills('goal')" href="javascript:void(0)">Goal</a>
+            </li>
+          </ul>
+          <aside class="contentContainer">
+            <article class="personal-info-container">
+              <section class="info">
+                <section>
+                  <p class="text-head">Name</p>
+                  <p>Daniel Olatunde</p>
+                </section>
+                <section>
+                  <p class="text-head">Location</p>
+                  <p>Nigeria Ibadan</p>
+                </section>
+              </section>
+
+              <section class="info">
+                <section>
+                  <p class="text-head">Phone</p>
+                  <p>+2348-1655-21344</p>
+                </section>
+                <section>
+                  <p class="text-head">Age</p>
+                  <p>20</p>
+                </section>
+              </section>
+
+              <section class="info">
+                <section class="text-head">
+                  <p class="text-head">Email</p>
+                  <p>olatundedaniel943@gmail.com</p>
+                </section>
+              </section>
+            </article>
+          </aside>
+        </section>
+      </article>
+
+      <!-- Service article -->
+      <article class="service" id="service">
+        <h2>Services</h2>
+        <article class="display-flex-center">
+          <section class="display-flex-center">
+            <p>
+              <svg
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="mobile-android"
+              >
+                <path
+                  fill="#33d8a7"
+                  d="M12.71,16.29l-.15-.12a.76.76,0,0,0-.18-.09L12.2,16a1,1,0,0,0-.91.27,1.15,1.15,0,0,0-.21.33,1,1,0,0,0,1.3,1.31,1.46,1.46,0,0,0,.33-.22,1,1,0,0,0,.21-1.09A1,1,0,0,0,12.71,16.29ZM16,2H8A3,3,0,0,0,5,5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"
+                ></path>
+              </svg>
+            </p>
+            <h4>Front-End Development</h4>
+            <p>
+              As a Front-end Developer, I specialize in creating visually
+              appealing and user-friendly inerfaces. My focus is on ensuring
+              that your website not only looks great but also provides an
+              engaging and intuitive experience for users
+            </p>
+            <button class="hire-btn read-more">Read more</button>
+          </section>
+          <section class="display-flex-center">
+            <p class="dev-icon"></p>
+            <h4>Back-End development</h4>
+            <p>
+              As a skilled back-end developer, I focus on building the
+              server-side logic and databases that power your website. My goal
+              is to create robust and scalable operations behind the scenes.
+            </p>
+            <button class="hire-btn read-more">Read more</button>
+          </section>
+        </article>
+      </article>
+
+      <!-- Projects article -->
+      <article class="projects" id="projects">
+        <h2>Projects</h2>
+        <p class="tip">We work with you, Not for you!</p>
+        <article class="display-flex-center">
+          <section class="display-flex-center">
+            <h3>Project 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+              eligendi ratione obcaecati nam voluptates esse, necessitatibus
+              quod dolorem incidunt alias distinctio debitis exercitationem
+              voluptatem laudantium rerum accusantium porro! Numquam,
+              exercitationem!
+            </p>
+          </section>
+          <section class="display-flex-center">
+            <h3>Project 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              enim aut, suscipit nisi, consequatur, ut voluptatum repellendus
+              placeat in natus debitis quae. Eveniet animi consequatur voluptas,
+              iusto ipsa voluptatem odit.
+            </p>
+          </section>
+          <section class="display-flex-center">
+            <h3>project 1</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+              animi mollitia nam, nisi odit, possimus recusandae eveniet
+              laboriosam a sit reprehenderit itaque vel magni? Ratione dolores
+              alias laudantium consequatur sunt.
+            </p>
+          </section>
+        </article>
+      </article>
+
+      <!-- Contact article. -->
+      <article class="contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form class="display-flex-center">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Email"
+          />
+          <input
+            type="phone"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="subject"
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="100"
+            rows="12"
+            placeholder="Your Message"
+          ></textarea>
+
+          <button class="submit-btn" type="submit">Send Message</button>
+        </form>
+      </article>
+
+      <footer class="display-flex-center">
+        <article>
+          <section class="display-flex-center social-cont">
+            <!-- tweeter svg -->
+            <a href="https://x.com/DanielOlat7426" target="_blank">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                class="tw-svg"
+                fill="orange"
+                width="50"
+                xmlns="http://www.w3.org/2000/svg"
+                id="Capa_1"
+                data-name="Capa 1"
+                viewBox="0 0 24 24"
+              >
+                <polygon
+                  points="6.861 6.159 15.737 17.764 17.097 17.764 8.322 6.159 6.861 6.159"
+                />
+                <path
+                  d="m0,0v24h24V0H0Zm15.063,19.232l-3.87-5.055-4.422,5.055h-2.458l5.733-6.554-6.046-7.91h5.062l3.494,4.621,4.043-4.621h2.455l-5.361,6.126,6.307,8.337h-4.937Z"
+                />
+              </svg>
+            </a>
+            <!-- Facebook svg-->
+            <a
+              href="https://web.facebook.com/profile.php?id=100088558277417"
+              target="_blank"
+            >
+              <?xml version="1.0" encoding="UTF-8"?>
+              <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <svg
+                class="fb-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 24 24"
+                style="enable-background: new 0 0 24 24"
+                xml:space="preserve"
+                fill="orange"
+                width="50"
+              >
+                <g>
+                  <path
+                    d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </section>
+          <p>Copyright &copy; DannyPy <abbr title="Fatokun Daniel">FD</abbr></p>
+        </article>
+        <div class="toggle-and-btt-cont">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24"
+              viewBox="0 0 24 24"
+              id="toggle-off"
+              width="50"
+              class="switch"
+            >
+              <path
+                fill="#F39700"
+                d="M16.5,6.5h-9C4.5,6.5,2,9,2,12s2.5,5.5,5.5,5.5h9c3,0,5.5-2.5,5.5-5.5S19.5,6.5,16.5,6.5z M7.5,14.5C6.1,14.5,5,13.4,5,12s1.1-2.5,2.5-2.5S10,10.6,10,12S8.9,14.5,7.5,14.5z"
+              ></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24"
+              viewBox="0 0 24 24"
+              id="toggle-on"
+              width="50"
+              class="switch"
+            >
+              <path
+                fill="#F39700"
+                d="M16.5,6.5h-9C4.5,6.5,2,9,2,12s2.5,5.5,5.5,5.5h9c3,0,5.5-2.5,5.5-5.5S19.5,6.5,16.5,6.5z M16.5,14.5c-1.4,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5S19,10.6,19,12S17.9,14.5,16.5,14.5z"
+              ></path>
+            </svg>
+          </div>
+          <a class="back-to-top" href="#"
+            ><img src="img/arrow-circle-up.svg" width="30" alt=""
+          /></a>
+        </div>
+      </footer>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
