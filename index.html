@@ -63,7 +63,7 @@
             easy to use. Let's work together to make your website awesome!
           </p>
           <div class="display-flex-center">
-            <button class="hire-btn">Hire Me!</button>
+            <button onclick="location.href='#contact'" class="hire-btn">Hire Me!</button>
           </div>
         </section>
         <section class="section2 display-flex-center">
@@ -237,7 +237,7 @@
       <!-- Contact article. -->
       <article class="contact" id="contact">
         <h2>Contact <span>Me</span></h2>
-        <form class="display-flex-center">
+        <form class="display-flex-center" action="POST">
           <input
             type="text"
             name="name"
@@ -368,5 +368,10 @@
       </footer>
     </main>
     <script src="scripts.js"></script>
+
+    <!-- <a href="#contact" style="text-decoration: none; padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px; display: inline-block; text-align: center;">
+      go contact
+    </a>
+     -->
   </body>
 </html>

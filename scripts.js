@@ -82,13 +82,13 @@ function sendMail() {
     .catch((error) => {
       console.error("Email failed to send:", error);
       alert("Failed to send your email. Please try again.");
+      clearInputs(param);
     });
 }
 
 function clearInputs(param) {
   for (key in param) {
-    param[key].value = "";
-    console.log(param[key]);
+    document.getElementById(`${key}`).value = '';
   }
 }
 
