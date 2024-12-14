@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* animation: slideRight 1.5s ease; */
+  /* border: 1px solid red; */
 }
 
 html {
@@ -84,6 +84,7 @@ body {
   color: var(--FONT-COLOR);
   font-size: var(--FS);
   font-family: var(--FF);
+  width: 100%;
 }
 
 /* computer nav */
@@ -99,7 +100,7 @@ header {
 }
 .header-cont {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
 }
@@ -403,9 +404,9 @@ figure:hover {
 /* about section \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .about .about-section1 {
-  width: 400px;
-  min-width: 300px;
-  height: 500px;
+  width: 350px;
+  /* min-width: 300px; */
+  height: 400px;
   background-color: #005d697a;
   position: relative;
 }
