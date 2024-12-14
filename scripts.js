@@ -98,6 +98,7 @@ document.querySelector(".submit-btn").addEventListener("click", (e) => {
   sendMail();
 });
 
+
 const on = document.getElementById("toggle-on");
 const off = document.getElementById("toggle-off");
 

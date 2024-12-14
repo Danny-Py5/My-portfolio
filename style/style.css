@@ -28,8 +28,8 @@ html {
   );
   --service-card-bg: transparent;
 
-  --FS: clamp(1rem, 2vh, 1.2rem);
-  --FS-RESPONSIVE-MAX-1REM: clamp(1rem, 3.5vw, 1.5rem);
+  --FS: clamp(1rem, 2vh, 1.1rem);
+  --FS-RESPONSIVE-MAX-1REM: clamp(1rem, 3vh, 1.4rem);
   --FF: Arial;
 
   --PADDING: 1rem;
