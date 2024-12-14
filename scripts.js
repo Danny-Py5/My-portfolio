@@ -45,7 +45,7 @@ function showSkills(clicked) {
             <ol>
                 <li>Learning new programming languages and frameworks</li>
                 <li>Building personal projects and contributing to open-source initiatives</li>
-                <li>Participating in coding challenges and hackathons</li>                        
+                       
                 <li>Reading about the latest tech trends and innovations</li>                      
             </ol>`;
   } else if (clicked === "personal-info") {
@@ -145,3 +145,19 @@ function changeTo(light) {
     document.documentElement.style = stylesOff;
   }
 }
+
+// observer api 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('slideFadeIn');
+    } else {
+      entry.target.classList.remove('slideFadeIn');
+    }
+  })
+});
+
+const allCards = document.querySelectorAll('.card')
+allCards.forEach(card => {
+  observer.observe(card);
+});
