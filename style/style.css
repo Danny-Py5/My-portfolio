@@ -466,24 +466,21 @@ figure:hover {
 }
 .about-section2 p {
   color: var(--INFO-COLOR);
-  /* font-size: var(--FS-RESPONSIVE-MAX-1REM); */
-  /* width: 100%; */
 }
 
 .about-section2 .skills-list-cont {
   margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
-  /* background-color: rgba(77, 77, 77, 0.267); */
 }
 .about-section2 .skills-list-cont li {
-  /* background-color: rgba(68, 68, 102, 0.171); */
   flex-grow: 1;
 }
 .about-section2 ul li a {
   /* margin-right: 10px; */
-  color: rgb(0, 194, 162);
+  color: rgb(3, 133, 111);
   display: block;
+  font-weight: 700;
 }
 .about-section2 ul li a:hover {
   opacity: 0.8;
