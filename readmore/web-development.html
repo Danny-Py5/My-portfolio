@@ -8,24 +8,99 @@
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="icon" href="../img/PhotoRoom-20240501_071523.png" />
     <style>
+        :root{
+            --article-color: rgb(184, 184, 184);
+        }
+        body{
+            margin-top: 60px;
+        }
+
+        .hero{
+            /* background-color: #bbbaba; */
+            width: 100%;
+            position: relative;
+            height: 100vh;
+        }
+        .hero figure{
+            height: 100%;
+        }
+        .hero img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.726);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            color: white;
+            transition: background-color .25s;
+        }
+        .content:hover {
+            background-color: rgba(0, 0, 0, 0.849);
+        }
+        .content button{
+            padding: 8px 1rem;
+            margin-top: 1rem;
+            background-color: var(--SPAN-FONT-COLOR);
+            border: 2px solid white;
+            border-radius: 8px;
+            color: inherit;
+            transition: .25s;
+        }
+        .content button:hover{
+            opacity: .8;
+        }
+        .slideUp-fadein{
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp-fadein 1s ease-out forwards;
+        }
         .main-article{
             padding: 8px;
-            margin-top: 60px;
-            color: rgb(184, 184, 184);
+            margin: auto;
+            color: var(--article-color);
             padding-bottom: 6rem;
+            max-width: 700px;
+            scroll-margin-top: 50px;
         }
-        h1{
+        .main-article ul{
+            margin-left: 16px;
+        }
+        .main-articlen h1{
             text-align: center;
         }
+
         strong {
             color: var(--FONT-COLOR)
         }
         .main-article li{
             margin-bottom: 1rem;
         }
-        h1, h2, h3, h4{
+        h2, h3, h4{
             color: var(--SPAN-FONT-COLOR);
             margin: 1rem 0;
+        }
+        @media screen and (max-width: 700px) {
+            .hero{
+                background-color: #fff;
+                height: 80vw;
+            }
+        }
+        @keyframes slideUp-fadein {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -55,8 +130,19 @@
           </nav>
         </div>
     </header>
-    <article class="main-article">
-        <h1>Front-End Development</h1>
+
+    <section class="hero">
+        <figure>
+            <img src="../img/medium-shot-man-working-desk_23-2149930933.avif" alt="" width="400" height="auto">
+        </figure>
+        <div class="content">
+            <h1 style="text-align: center;" class="slideUp-fadein">Learn more about Web Development</h1>
+            <button onclick="location.href='#main-content'" class="slideUp-fadein">Jump to main content</button>
+        </div>
+    </section>
+
+    <article class="main-article" id="main-content" >
+        <h2 style="text-align: center;">Front-End Development</h2>
         <p>Front-end development is all approximately developing what customers see and engage with once they go to a  website. I use present day equipment and strategies to make your website works properly on all devices, from computer systems to cellular phones.</p>
 
         <h2>Here are what I can do for you:</h2>
@@ -82,7 +168,7 @@
             </li>
         </ul>
 
-        <a href="../index.html" style="color: rgb(201, 201, 201);">Back to Home page</a>
+        <a href="../index.html" style="color: inherit;">Back to Home page</a>
     </article>
 
     <footer class="display-flex-center">
@@ -188,13 +274,13 @@
                 isOn = !isOn;
 
                 if (isOn) {
-                on.style.display = "inline"; // Show "on" SVG
-                off.style.display = "none"; // Hide "off" SVG
-                changeTo(true);
+                    on.style.display = "inline"; // Show "on" SVG
+                    off.style.display = "none"; // Hide "off" SVG
+                    changeTo(true);
                 } else {
-                off.style.display = "inline"; // Show "off" SVG
-                on.style.display = "none"; // Hide "on" SVG
-                changeTo(false);
+                    off.style.display = "inline"; // Show "off" SVG
+                    on.style.display = "none"; // Hide "on" SVG
+                    changeTo(false);
                 }
             });
         });
@@ -205,14 +291,8 @@
             --header-bg: rgb(0, 19, 20);
             --IMAGE-BOX-SHADOW: var(--header-bg);
             --IMAGE-BOX-SHADOW-HOVER: rgba(0, 19, 20, 0.5);
+            --article-color: #222;
             --FONT-COLOR: #222;
-            --home-img-bg: var(--header-bg);
-            --INFO-COLOR: #444;
-            --BUTTON-BORDER-COLOR: var(--SPAN-FONT-COLOR);
-            --service-card-bg-img: linear-gradient(
-                to bottom,
-                var(--header-bg),
-                rgb(49, 49, 49)
             );
             `;
 
