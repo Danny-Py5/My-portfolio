@@ -719,6 +719,7 @@ footer .toggle-and-btt-cont {
   position: fixed;
   right: 10px;
   bottom: 10px;
+  z-index: 2;
 }
 .back-to-top {
   background-color: var(--SPAN-FONT-COLOR);
