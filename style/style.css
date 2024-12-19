@@ -289,7 +289,7 @@ ul li:target {
   padding-top: 100px;
   padding-bottom: 50px;
   gap: 2rem;
-  /* min-height: 60vh; */
+  height: 100vh;
 }
 
 /* :where(.section1 .name) {
