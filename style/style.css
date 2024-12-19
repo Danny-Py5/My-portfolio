@@ -1,4 +1,5 @@
 * {
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +13,7 @@ html {
 
 :root {
   --LOGO-WIDTH: 500px;
-
+  --rest-color: #f0f0f0;
   --BGCOLOR: rgb(0, 19, 20);
   --FONT-COLOR: #ffecca;
   --SPAN-FONT-COLOR: rgb(255, 115, 0);
@@ -27,6 +28,8 @@ html {
     rgb(49, 49, 49)
   );
   --service-card-bg: transparent;
+  --shadow: 0 0 30px rgba(62, 61, 61, 0.203);
+  --shadow-hover: 0 0 30px rgba(62, 61, 61, 0.417);
 
   --FS: clamp(1rem, 2vh, 1.1rem);
   --FS-RESPONSIVE-MAX-1REM: clamp(1rem, 3vh, 1.4rem);
@@ -37,6 +40,7 @@ html {
   --ABOUT-IMG-BORDER-COLOR: rgba(216, 97, 0, 0.342);
   --NAVBAR-UL-MIN-WIDTH: 200px;
   --NAVBAR-UL-MAX-WIDTH: 600px;
+  --card-max-width: min(340px, 400px);
 
   --H2-FS: clamp(1.5rem, 4vw, 2rem);
   --INPUTS-FONT-COLOR: rgb(191, 191, 191);
@@ -55,6 +59,14 @@ html {
   align-items: center;
 }
 
+.card-box-shadow{
+  box-shadow: var(--shadow);
+  transition: .5s;
+}
+.card-box-shadow:hover{
+  box-shadow: var(--shadow-hover);
+  transition: .5s;
+}
 .nowrap {
   white-space: nowrap;
 }
@@ -83,6 +95,19 @@ p,
 li {
   line-height: 25px;
   font-size: var(--FS);
+}
+button{
+  font: inherit;
+  color: white;
+  background-color: var(--SPAN-FONT-COLOR);
+  border: none;
+  border-radius: 1rem;
+  padding: .5rem min(10vw, 3rem);
+  transition: all .5s;
+}
+button:hover{
+  opacity: .9;
+  transform: translateY(-4px)
 }
 
 img::selection {
@@ -360,26 +385,7 @@ ul li:target {
 
 /* this style will reflect on the read more button, coz readmore button have hire-btn class */
 .hire-btn {
-  padding: 0.5rem 2rem;
-  /* margin: 0 auto; */
   white-space: nowrap;
-  background-color: transparent;
-  color: white;
-  font-weight: 300;
-  border: 2px solid var(--BUTTON-BORDER-COLOR);
-  /* font-size: var(--FS-RESPONSIVE-MAX-1REM); */
-  transition: all 0.3s linear;
-  border-radius: 12px;
-  background-color: var(--header-bg);
-}
-
-.hire-btn:hover {
-  background-color: var(--BUTTON-HOVER-COLOR);
-  transform: translateY(-5px);
-}
-.hire-btn:active {
-  background-color: var(--BUTTON-ACTIVE-COLOR);
-  transform: translateY(-5px);
 }
 
 .section2 figure {
@@ -389,9 +395,8 @@ ul li:target {
   width: min(300px, 35vw);
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 5px 10px var(--IMAGE-BOX-SHADOW);
+  box-shadow: var(--shadow);
   transition: transform 0.5s linear, box-shadow 0.5s linear;
-
   animation: bounce 10s linear infinite;
   z-index: 0;
 }
@@ -404,10 +409,6 @@ ul li:target {
   border-radius: 50%;
 }
 
-figure:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px var(--IMAGE-BOX-SHADOW-HOVER);
-}
 
 .about {
   /* justify-content: space-around; */
@@ -418,18 +419,18 @@ figure:hover {
 /* about section \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .about .about-section1 {
-  width: 350px;
+  max-width: 350px;
   /* min-width: 300px; */
   height: 400px;
   background-color: #0000002B;
   position: relative;
 }
 .about .about-section2 {
-  width: 500px;
+  max-width: 500px;
   /* background-color: rgb(163, 163, 163); */
   border: 1.5px solid rgba(0, 0, 0, 0.425);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: .5em;
 }
 .about-section1,
 .about-section1 div,
@@ -606,11 +607,12 @@ aside ol li {
 }
 
 /* cards styles */
+
 .service article section,
 .projects article section {
   background-image: var(--service-card-bg-img);
   background-color: var(--service-card-bg);
-  color: var(--header-font-color);
+  color: var(--INFO-COLOR);
 }
 
 .service article section {
@@ -624,14 +626,9 @@ aside ol li {
   /* background-color: red; */
 }
 
-.projects article section:hover,
-.service article section:hover {
-  box-shadow: 0px 5px 15px var(--SPAN-FONT-COLOR);
-}
 .read-more {
   position: absolute;
   bottom: 20px;
-  border-color: var(--BUTTON-BORDER-COLOR);
 }
 .service article section svg,
 .dev-icon {
@@ -652,23 +649,45 @@ aside ol li {
 }
 /* shared sytles of service and project article section */
 .service article section,
-.projects article section {
-  width: min(300px, 400px);
-  height: 400px;
+.projects article section, 
+.projects article section  {
+  max-width: 400px;
+  min-height: 400px;
 }
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-.projects article section {
-  width: min(300px, 400px);
+.project__card{
   border: none;
   border-radius: 1.5rem;
   flex-direction: column;
-  padding: 1rem;
-  /* font-size: 1.3rem; */
   transition: 0.25s;
 }
+.project__figure img{
+  border-radius: 1.5rem 1.5rem 0 0 ;
+  width: 100%;
+  object-fit: cover;
+}
 
+.project__detail{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.project__a:any-link{
+  color: white;
+  background-color: var(--SPAN-FONT-COLOR);
+  padding: 1rem;
+  justify-self: flex-start;
+  border-radius: 1rem;
+  text-align: center;
+  transition: .25s;
+  text-decoration: none;
+}
+.project__a:hover{
+  opacity: .8;
+}
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* contact */
 .contact h2 {
@@ -690,22 +709,6 @@ aside ol li {
   margin-bottom: 1rem;
   color: var(--INPUTS-FONT-COLOR);
   font-family: inherit;
-}
-.contact button {
-  padding: 12px 1rem;
-  border: 1px solid var(--BUTTON-BORDER-COLOR);
-  border-radius: 8px;
-  background-color: transparent;
-  font-family: inherit;
-  color: var(--FONT-COLOR);
-  transition: all 0.25s linear;
-}
-.contact button:hover {
-  background-color: var(--BUTTON-HOVER-COLOR);
-  transform: translateY(-5px);
-}
-.contact :is(button:active, button:focus) {
-  background-color: var(--BUTTON-ACTIVE-COLOR);
 }
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */

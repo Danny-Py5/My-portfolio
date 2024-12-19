@@ -123,7 +123,7 @@ document.querySelectorAll(".switch").forEach((togglebutton) => {
 
 function changeTo(light) {
   const stylesOn = `
-  --BGCOLOR: white;
+  --BGCOLOR: #f0f5f5;
   --header-bg: rgb(0, 19, 20);
   --IMAGE-BOX-SHADOW: var(--header-bg);
    --IMAGE-BOX-SHADOW-HOVER: rgba(0, 19, 20, 0.5);
@@ -131,11 +131,7 @@ function changeTo(light) {
    --home-img-bg: var(--header-bg);
    --INFO-COLOR: #444;
    --BUTTON-BORDER-COLOR: var(--SPAN-FONT-COLOR);
-  --service-card-bg-img: linear-gradient(
-    to bottom,
-    var(--header-bg),
-    rgb(49, 49, 49)
-  );
+  --service-card-bg-img: none;
   `;
 
   const stylesOff = ``;
