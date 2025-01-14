@@ -37,8 +37,8 @@ function showSkills(clicked) {
             <ol>
                 <li><span>Programming languages:</span><p>Python, Javascript</p></li>
                 <li><span>Development languages</span><p>HTML/CSS</p></li>
-                <li><span>Development framework:</span> <p>Django</p></li>
-                <li><span>Database:</span> <p>MySQL, sqlite3<p></li>
+                <li><span>Development framework:</span> <p>Django, Nodejs/Express</p></li>
+                <li><span>Database:</span> <p>MongoDB, sqlite3<p></li>
             </ol>`;
   } else if (clicked === "interests") {
     contentContainer.innerHTML = `<h4>In my free time, I enjoy:</h4>
