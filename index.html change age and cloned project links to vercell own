@@ -152,7 +152,7 @@
                 </section>
                 <section>
                   <p class="text-head">Age</p>
-                  <p>20</p>
+                  <p>21</p>
                 </section>
               </section>
 
@@ -219,7 +219,7 @@
              <div class="project__detail">
               <h3 class="project__h3">Netflix Website Clone</h3>
               <p>I recreated the Netflix website (from <a style="color: inherit"  href="https://www.netflix.com/ng/" target="_blank"><em>Netflix Website</em></a>) to improve my front-end skills, focusing on copying the design, making it mobile-friendly, and paying attention to details.</p>
-              <a target="_blank" class="project__a" href="https://danny-py5.github.io/Netflix-clone/">Visit the cloned website</a>
+              <a target="_blank" class="project__a" href="https://netflix-clone-6aep.vercel.app/">Visit the cloned website</a>
              </div>
           </section>
 
@@ -230,7 +230,7 @@
              <div class="project__detail">
               <h3 class="project__h3">Digian Website Clone</h3>
               <p>I recreated the Digian website (from <a style="color: inherit"  href="https://www.free-css.com/free-css-templates" target="_blank"><em>Free CSS Template</em></a>) to improve my front-end skills, focusing on copying the design, making it mobile-friendly, and paying attention to details.</p>
-              <a target="_blank" class="project__a" href="https://danny-py5.github.io/digian-website-clone/">Visit the cloned website</a>
+              <a target="_blank" class="project__a" href="https://digian-website-clone.vercel.app/">Visit the cloned website</a>
              </div>
           </section>
           
